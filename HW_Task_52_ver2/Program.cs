@@ -1,4 +1,4 @@
-﻿//Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждой строке.
+﻿//Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 static int Prompt(string message)
 {
     System.Console.Write(message);
@@ -32,18 +32,18 @@ static void arrayPrint(int[,] arrayPrintVoid)
 
 static void arrayAverageOf(int[,] arrayAverageVoid)
 {
-    for (int i = 0; i<arrayAverageVoid.GetLength(0); i++)
+    for (int j = 0; j<arrayAverageVoid.GetLength(1); j++)
         {
             double sumOfLine = 0;
             int count = 0;
-            for (int j = 0; j<arrayAverageVoid.GetLength(1); j++)
+            for (int i = 0; i<arrayAverageVoid.GetLength(0); i++)
             {
-                if(j == arrayAverageVoid.GetLength(1)-1)
+                if(i == arrayAverageVoid.GetLength(0)-1)
                 {
                     count++;
                     sumOfLine = sumOfLine + arrayAverageVoid[i,j];
                     double averageValueofLines = Math.Round(sumOfLine/count, 3);
-                    System.Console.WriteLine($"Average of {i+1} lines: {averageValueofLines}");
+                    System.Console.WriteLine($"Average of {j+1} columnn: {averageValueofLines}");
                 }
                 count++;
                 sumOfLine = sumOfLine + arrayAverageVoid[i,j];
