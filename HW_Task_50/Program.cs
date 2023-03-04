@@ -64,8 +64,8 @@ static void arraySearchValue(int[,] arraySearchVoid, int positionArraySearchVoid
 }
 
 
-int m = 4;
-int n = 5;
+int m = new Random().Next(5, 10);
+int n = new Random().Next(5, 10);
 
 int[,] array = new int[m, n];
 arrayFilling(array);
